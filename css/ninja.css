@@ -1,0 +1,43 @@
+body {
+		background-image: url('dojo.jpg');			
+	}
+
+.message {
+	width:470px;
+	height:250px;
+	margin: auto;
+	/*background: rgba(153,128,28, 0.6);*/
+	background: rgba(128, 128, 128, 0.54);
+	border-radius: 25px;
+	text-align: center;
+	/*position: absolute;*/
+	margin: 0px,
+
+}
+	.message h3{
+		color: white;
+		margin-top: 100px;
+		padding-top: 20px;
+	}
+
+.player{
+		background:transparent;
+		background-size: 200px 200px;
+		height:200px;
+		width:200px;
+		margin:auto;
+		background-repeat: no-repeat;
+		}
+
+.player1 {
+	float: left;
+	margin-left: 200px;
+}
+.player2 {
+	float: right;
+	margin-right: 200px;
+}
+
+form {
+	text-align:center;
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset-"utf-8">
+	<title>Ninja Arena</title>
+	
+	<link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/ninja.css">
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<!-- copy the above from site -->
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(".select_players").hide(); 
+			                //document loads, this happends first, hides dropdown
+
+            $("button").hover( function() {
+				$("body").css("background-image", "url(" + $(this).val() + ")"); // when you hover, display what this value is.. ie. "beach" button, will display the beach cuz value is arena/beach.jpg 
+			},
+				function() {$(".body").css("background-image", "none"); // alt
+			});
+
+			$("button").click(function() {
+				$("body").css("background-image", "url(" + $(this).val() + ")");  // the order of this and the top one don't matter 
+				$(".arena").hide();
+				$(".select_players").show(); 
+			});
+
+			$("select").on('change', function() {
+					$("div ." + $(this).attr("id") ).css("background-image", "url(" + $(this).val() + ")" );
+			});
+		});
+
+
+	</script>
+</head>
+	<body>
+		    <div class="message arena">
+				<h3>Select Arena</h3>
+				<button value="arena/beach.jpg" class="btn btn-default">Beach</button>
+				<button value="arena/calvinandhobbes.jpg" class="btn btn-default">Planet</button>
+				<button value="arena/dojo.jpg" class="btn btn-default">Dojo</button>
+				<button value="arena/forest.jpg" class="btn btn-default">Forest</button>
+				<button value="arena/matrix.jpg" class="btn btn-default">Matrix</button>
+				<button value="arena/snow.jpg" class="btn btn-default">Snow</button>
+			</div> 
+
+			<div class="message select_players">
+				<h3>Select Players</h3>	
+				<form action="">
+					<select id="player1" name="player1" class="btn btn-default btn-lg dropdown-toggle">
+						<option>Select Player 1</option> <!-- this will be the default on dropdown -->
+						<option value="ninja/white.png">White Ninja</option>
+						<option value="ninja/yellow.png">Yellow Ninja</option>
+						<option value="ninja/black.png">Black Ninja</option>
+						<option value="ninja/red.png">Red Ninja</option>
+						<option value="ninja/green.png">Green Ninja</option>
+						<option value="ninja/leo.jpg">Leo</option>
+					</select>
+					<select id="player2" name="player2" class="btn btn-default btn-lg dropdown-toggle">
+						<option>Select Player 2</option> --> <!-- this will be the default on dropdown -->
+						<option value="ninja/white.png">White Ninja</option>
+						<option value="ninja/yellow.png">Yellow Ninja</option>
+						<option value="ninja/black.png">Black Ninja</option>
+						<option value="ninja/red.png">Red Ninja</option>
+						<option value="ninja/green.png">Green Ninja</option>
+						<option value="ninja/leo.jpg">Leo</option>
+					</select>
+				</form>
+			</div> <!-- end message sel players --> 
+
+			 <div class="players">
+				<div class="player player1"></div>
+				<div class="player player2"></div> 
+			</div>   		
+	</body>
+</html>
